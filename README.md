@@ -14,11 +14,11 @@
 ​
 ## Link to GitHub main project page
 ​
-[Server-Side-APIs-Weather-Dashboard Page on GitHub](https://github.com/Maykanwara/Server-Side-APIs-Weather-Dashboard)
+[Server-Side-APIs-Weather-Dashboard Page on GitHub](https://github.com/Maykanwara/APIs-Weather-Dashboard-2)
 ​
 ## Link to Deployed Application
 
-[Live Depoyment Link](/))
+[Live Depoyment Link](/https://maykanwara.github.io/APIs-Weather-Dashboard-2/))
 ​
 ## Screenshots of Finished Product
 ​
