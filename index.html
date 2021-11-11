@@ -5,72 +5,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css" />   
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="/image/sky.jpeg" 
+    <!-- <link rel="stylesheet" href="/image/sky.jpeg" > -->
 
 </head>
-<body onload="DefaultScreen()"
-
-    <center>
-        <h1 id="Para1"> 5-DAYS WEATHER FORECAST</h1>
-    <p id="inputContainer">City: <input type="text" id="cityInput"</p>
-    <button>Click Me</button>
-    <h2 id="cityName">>--Marysville</h2>
-    </center>
+<body onload="DefaultScreen()">
+  
+   
+        <h1 id="Para1">5-DAYS WEATHER FORECAST</h1>
+    <p id="inputContainer">City: <input id="cityInput" type="text"></p>
+    <p id="day0min"></p>
+    <p id="day0max"></p>
+    
+    <button id="clickme">Click Me</button>
+    <h2 id="cityName"> Marysville</h2>
+    
 
     <div class="temp">51°C</div>
-    <img src="image/image/image2.jpeg" alt="" class="icon" />
+    <!-- <img src="image/image/image2.jpeg" alt="" class="icon" /> -->
     <div class="description">Cloudy</div>
     <div class="humidity">Humidity:60%</div>
-    <div class="wind>Wind speed: 6.2 km/h</div>
+    <div class="wind">Wind speed: 6.2 km/h</div>
+    
+        
+    
+
+    <div id="iconContainer" class="container">
 
         
 
-     <div id="weatherContainer">
-            <div id="iconContainer">
+          <div class="row align-items-center">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <i class="fas fa-sun"></i>
+                <div id="day1min"></div>
+                <div id="day1max"></div>
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <i class="fas fa-sun"></i>
+                    <div id="day2min"></div>
+                    <div id="day2max"></div>
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <i class="fas fa-sun"></i>
+                    <div id="day3min"></div>
+                    <div id="day3max"></div>
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <i class="fas fa-sun"></i>
+                    <div id="day4min"></div>
+                    <div id="day4max"></div>
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <i class="fas fa-sun"></i>
+                    <div id="day5min"></div>
+                    <div id="day5max"></div>
+                    <img  id="img5" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+
+          </div>
+
+
+            <!-- <p class="icons"></p>
+                <p class="weather" id="day1"></p>
+                <div class="image"><img src="/image/sky.jpeg"  class=" imgClass" id="imag1" alt=""></div>
+                
+                <p class="minValues" id="day1min">
+                    loading...
+                </p>
+                
+                <p class="maxValues" id="day1max">
+                    Loding...
+                </p>
+
+           
+
             <div class="icons">
-                <p class="weather"> id="day1></p>
-                </div class="image"><img src="/image/sky.jpeg"  class=" imgClass" id="imag1" alt="></div>
-                <p class="minValues" id="day1min"><Loding...</p>
-                <p class="maxValues" id="day1max"><Loding...</p>
+                <p class="weather" id="day2"></p>
+                <div class="image"><img src="/image/image2.jpeg"  class=" imgClass" id="imag1" alt=""></div>
+                <p class="minValues" id="day2min">
+                    Loding...
+                </p>
+                <p class="maxValues" id="day2max">
+                    Loding...
+                </p>
 
             </div>
 
             <div class="icons">
-                <p class="weather"> id="day2></p>
-                </div class="image"><img src="/image/image2.jpeg"  class=" imgClass" id="imag1" alt="></div>
-                <p class="minValues" id="day2min"><Loding...</p>
-                <p class="maxValues" id="day2max"><Loding...</p>
+                <p class="weather" id="day3">
+
+                </p>
+                <div class="image"><img src="/image/image3.jpeg"  class="imgClass" id="imag1" alt=""></div>
+                <p class="minValues" id="day3min">
+                    Loding...
+                </p>
+                <p class="maxValues" id="day3max">
+                    Loding...
+                </p>
 
             </div>
 
             <div class="icons">
-                <p class="weather"> id="day3></p>
-                </div class="image"><img src="/image/image3.jpeg"  class=" imgClass" id="imag1" alt="></div>
-                <p class="minValues" id="day3min"><Loding...</p>
-                <p class="maxValues" id="day3max"><Loding...</p>
-
-            </div>
-
-            <div class="icons">
-                <p class="weather"> id="day4></p>
-                </div class="image"><img src="/image/image4.jpeg"  class=" imgClass" id="imag1" alt="></div>
-                <p class="minValues" id="day4min"><Loding...</p>
-                <p class="maxValues" id="day4max"><Loding...</p>
+                <p class="weather" id="day4">
+                </p>
+                <div class="image"><img src="/image/image4.jpeg"  class="imgClass" id="imag1" alt=""></div>
+                <p class="minValues" id="day4min">
+                    Loding...
+                </p>
+                <p class="maxValues" id="day4max">
+                    Loding...
+                </p>
 
             </div>
 
 
             <div class="icons">
-                <p class="weather"> id="day5></p>
-                </div class="image"><img src="/image/ mountain.jpeg/"  class=" imgClass" id="imag1" alt="></div>
-                <p class="minValues" id="day5min"><Loding...</p>
-                <p class="maxValues" id="day5max"><Loding...</p>
+                <p class="weather" id="day5">
+
+                </p>
+                <div class="image"><img src="/image/ mountain.jpeg/"  class=" imgClass" id="imag1" alt=""></div>
+                <p class="minValues" id="day5min">
+                    Loding...
+                </p>
+                <p class="maxValues" id="day5max">
+                    Loding...
+                </p>
 
             </div>
     <header>
@@ -80,10 +191,10 @@
     </div>
 
     <footer>
-    </footer>
+    </footer> -->
 
     
-   <script src="script.js</script>
+   <script src="script.js"></script>
 </body>
 
 
