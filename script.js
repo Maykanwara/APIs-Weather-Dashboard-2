@@ -20,6 +20,13 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${newName.value}+&appi
 .then(response => response.json())
 .then(data =>{
     console.log(data)
+    var iconurl = "http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png";
+    console.log(iconurl )
+    // for(i=0;i<5;i++){
+    //     document.getElementById("day" +(i+0)+"min").innerHTML ="min:" +Number(data.list[i].main.temp_min -283.54).toFixed(1)+"°";
+
+    // }
+
     for(i=0;i<5;i++){
         document.getElementById("day" +(i+1)+"min").innerHTML ="min:" +Number(data.list[i].main.temp_min -283.54).toFixed(1)+"°";
 

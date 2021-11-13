@@ -4,6 +4,19 @@
     font-family: 'Comic Neue', cursive;;
 }
 
+body {
+    background-color: palevioletred: 
+    background-size: cover;
+    background-position: top center;
+    
+}
+
+.app wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 #cityInput, #cityName, #inputContainer,button {
     margin: 3px;
     padding: 5px;
