@@ -1,18 +1,9 @@
-//GIVEN a weather dashboard with form inputs
-//WHEN I search for a city
-//THEN I am presented with current and future conditions for that city and that city is added to the search history
-//WHEN I view current weather conditions for that city
-//THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-//WHEN I view the UV index
-//THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-//WHEN I view future weather conditions for that city
-//THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-//WHEN I click on a city in the search history
-//THEN I am again presented with current and future conditions for that city
+
 
 var temperature = document.getElementById("current-temperature");
 var clickme = document.getElementById("clickme");
 var cityTitle = document.querySelector(".city-title")
+var currentDate = document.querySelector("#current-date")
 function getCurrentWeather() {
   const cityName = document.getElementById("cityName");
   fetch(
@@ -36,12 +27,14 @@ function getCurrentWeather() {
   )} 
 
 function GetInfo() {
-//   const newName = document.getElementById("cityInput");
+
 getCurrentWeather()
   const cityName = document.getElementById("cityName");
-//   cityName.innerHTML = "--" + newName.value + "--";
 
-//   console.log(newName);
+
+
+
+
   console.log(cityName.value)
   fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}+&appid=1469af63617ec2a2f93918eb6da3efe8&units=imperial`
@@ -50,17 +43,20 @@ getCurrentWeather()
     .then((data) => {
       console.log("DATA!!!! FROM OPEN WEATHER API!!!", data);
       cityTitle.textContent = data.city.name;
-      
-
+      var today = new Date().toString().slice(0, 15);
+      currentDate.textContent = today
       for (i = 0; i <= 5; i++) {
-        //     document.getElementById("day" +(i+0)+"min").innerHTML ="min:" +Number(data.list[i].main.temp_min -283.54).toFixed(1)+"°";
+        
         document.getElementsByClassName("city-title")[i].textContent =
           data.city.name;
+          var forecastDate = new Date()
+          forecastDate.setDate((forecastDate.getDate() + i + 1))
+          document.getElementById("date" + (i + 1)).innerHTML = forecastDate.toString().slice(0,15)
       }
 
       for (i = 0; i < 5; i++) {
-        document.getElementById("day" + (i + 1) + "min").innerHTML =
-          // "min:" + Number(data.list[i].main.temp_min - 283.54).toFixed(1) + "°";
+       
+         
         "min: " + data.list[0].main.temp
 
         console.log("i inside max!!", i);
@@ -72,22 +68,11 @@ getCurrentWeather()
           data.list[i].weather[0].icon +
           ".png";
 
-        //   "http://openweathermap.org/img/w/" + iconcode + ".";
+        
 
         console.log("I AM i at the end", i);
       }
-      //   for (i = 0; i < 5; i++) {
-      //       console.log('i inside max!!')
-      //     document.getElementById("day" + (i + 1) + "max").innerHTML =
-      //       "max:" + Number(data.list[i].main.temp_max - 286.33).toFixed(1) + "°";
-      //   }
-
-      //   for (i = 0; i < 5; i++) {
-      //     document.getElementById("img" + (i + 1)).src =
-      //       "http://openweathermap.org/img/wn/" +
-      //       data.list[i].weather[0].icon +
-      //       ".jpeg";
-      //   }
+      
     })
     .catch((err) => {
       console.log("ERRRRRRR!!!!", err);
@@ -96,8 +81,7 @@ getCurrentWeather()
 }
 
 function DefaultScreen() {
-//   document.getElementById("cityInput").defaultValue = "Marysville";
-//   GetInfo();""
+
 clickme.addEventListener("click", GetInfo )
 }
 const d = new DataTransfer();
@@ -119,9 +103,7 @@ function CheckDay(day) {
   }
 }
 
-for (i = 0; i < 5; i++) {
-  document.getElementById("day" + (i + 1)).innerHTML = weekday[CheckDay(i)];
-}
+
 
 
 
