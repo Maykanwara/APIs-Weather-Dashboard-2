@@ -45,7 +45,7 @@ getCurrentWeather()
       cityTitle.textContent = data.city.name;
       var today = new Date().toString().slice(0, 15);
       currentDate.textContent = today
-      for (i = 0; i <= 5; i++) {
+      for (i = 0; i <= 4; i++) {
         
         document.getElementsByClassName("city-title")[i].textContent =
           data.city.name;
