@@ -4,6 +4,7 @@ var temperature = document.getElementById("current-temperature");
 var clickme = document.getElementById("clickme");
 var cityTitle = document.querySelector(".city-title")
 var currentDate = document.querySelector("#current-date")
+
 function getCurrentWeather() {
   const cityName = document.getElementById("cityName");
   fetch(
@@ -57,11 +58,15 @@ getCurrentWeather()
       for (i = 0; i < 5; i++) {
        
          
-        "min: " + data.list[0].main.temp
+
 
         console.log("i inside max!!", i);
-        document.getElementById("day" + (i + 1) + "max").innerHTML =
-          "max:" + Number(data.list[i].main.temp_max ).toFixed(1) + "°";
+        document.getElementById("day" + (i + 1) + "min").innerHTML = "min: " + data.list[0].main.temp
+        document.getElementById("day" + (i + 1) + "max").innerHTML = "max:" + Number(data.list[i].main.temp_max ).toFixed(1) + "°";
+
+       
+
+         
 
         document.getElementById("img" + (i + 1)).src =
           "http://openweathermap.org/img/w/" +
@@ -81,6 +86,57 @@ getCurrentWeather()
 }
 
 function DefaultScreen() {
+
+
+// function colorCodeUVI() {
+//   UV index --1-2 (low) 3-5 (moderate) 6-7 (high) 8-10 (very high) 11+ (extreme)
+//     $(".uvicolor").each(function () {
+// }
+// currentUVI = (data.current.uvi)
+//   if (currentUVI <=2 ) {
+//     $(".uvicolor").attr(style", "background-color: green;")
+//     $(".uvicolor").text("Low")
+//     $(".uvicolor").attr("style", "background-color: green;").text("Low")
+
+//     } else if(3 <= currentUVI <= 5) {
+//       $(".uvicolor").attr("style", "background-color: yellow;")
+//       $(".uvicolor").text("Moderate")
+//       $(".uvicolor").attr("style", "background-color: yellow;").text("Moderate")
+
+//     } else if (6 <= currentUVI <= 7) {
+      
+//       $(".uvicolor").attr("style", "background-color: orange;")
+//       $(".uvicolor").text("High")
+//       $(".uvicolor").attr("style", "background-color: orange;").text("High")
+
+//     } else if (8 <= currentUVI <= 10) {
+//       $(".uvicolor").attr("style", "background-color: red;")
+//       $(".uvicolor").text("High")
+//       $(".uvicolor").attr("style", "background-color: red;").text("High")
+
+//     } else if (11 <= currentUVI) {
+//       $(".uvicolor").attr("style", "background-color: violet;")
+//       $(".uvicolor").text("High")
+//       $(".uvicolor").attr("style", "background-color: violet;").text("High")
+//     }
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 clickme.addEventListener("click", GetInfo )
 }

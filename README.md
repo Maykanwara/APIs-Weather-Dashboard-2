@@ -1,8 +1,5 @@
 # APIs-Weather-Dashboard-2
 
-
-# Kanwara Moore
-​
 ## Description
 ​This is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
@@ -11,6 +8,11 @@
 - HTML
 - CSS
 - JS
+
+
+## With Help From
+-Jquery
+-OpenWeatherApp
 ​
 ## Link to GitHub main project page
 ​
@@ -22,23 +24,23 @@
 ​
 ## Screenshots of Finished Product
 ​
-### Desktop Header
-​
-
-​
-### Desktop Work Section
-​
-
-​
-### Desktop Contact and Footer
-​
-
-​
-## Acknowledgements
-​
-
-​
 ## Contact Information
 ​Email: maykanwara@gmail.com
+​
+
+​
+
+​
+
+​
+
+​
+
+​
+
+​
+
+​
+
 
 
