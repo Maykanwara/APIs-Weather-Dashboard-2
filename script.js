@@ -88,6 +88,12 @@ getCurrentWeather()
 function DefaultScreen() {
 
 
+// fetch (
+// `https://api.openweathermap.org/data/2.5/onecall?${UVIndex}&exclude={part}&appid={API key}` )
+// .then((response) => response.json())
+// .then((data) => {
+  // console.log("DATA!!!! FROM OPEN WEATHER API!!!", data);
+
 // function colorCodeUVI() {
 //   UV index --1-2 (low) 3-5 (moderate) 6-7 (high) 8-10 (very high) 11+ (extreme)
 //     $(".uvicolor").each(function () {
